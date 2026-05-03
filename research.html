@@ -1,0 +1,1363 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Style 1 Editorial Dossier Mockup</title>
+    <style>
+      :root {
+        --paper: #f5efe6;
+        --paper-deep: #efe5d7;
+        --ink: #1f2120;
+        --muted: #5f5a55;
+        --line: rgba(63, 50, 42, 0.18);
+        --accent: #8d4f3e;
+        --accent-soft: rgba(141, 79, 62, 0.12);
+        --chapter: #f9f4ee;
+        --shadow: 0 24px 50px rgba(48, 39, 32, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Avenir Next", "Gill Sans", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(141, 79, 62, 0.14), transparent 28%),
+          linear-gradient(180deg, #f8f3eb 0%, #f4ede3 48%, #f0e7db 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        width: min(1180px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 36px 0 96px;
+      }
+
+      .masthead {
+        position: relative;
+        padding: 28px 0 44px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .eyebrow,
+      .section-kicker,
+      .mini-label {
+        margin: 0;
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      .hero-grid {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 1.35fr 0.8fr;
+        align-items: end;
+        margin-top: 18px;
+      }
+
+      h1,
+      h2,
+      h3,
+      .dropcap {
+        font-family: "Iowan Old Style", "Baskerville", "Palatino Linotype", serif;
+      }
+
+      h1 {
+        max-width: 12ch;
+        font-size: clamp(3rem, 6.4vw, 5.7rem);
+        line-height: 0.92;
+        letter-spacing: -0.03em;
+      }
+
+      .hero-copy p {
+        max-width: 65ch;
+        margin-top: 18px;
+        font-size: 1.04rem;
+        line-height: 1.8;
+        color: #4f4a45;
+      }
+
+      .hero-photo {
+        min-height: 320px;
+        border: 1px solid var(--line);
+        border-radius: 28px;
+        background: rgba(255, 251, 246, 0.78);
+        box-shadow: var(--shadow);
+        overflow: hidden;
+      }
+
+      .hero-photo img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      .theme-nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+
+      .theme-nav a {
+        text-decoration: none;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 10px 14px;
+        background: rgba(255, 252, 247, 0.72);
+      }
+
+      .overview {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: 1.1fr 1fr;
+        margin-top: 34px;
+        padding: 26px;
+        border-radius: 32px;
+        background: rgba(255, 252, 247, 0.65);
+        border: 1px solid rgba(63, 50, 42, 0.12);
+      }
+
+      .overview p {
+        line-height: 1.75;
+        color: #4c4742;
+      }
+
+      .overview-list {
+        display: grid;
+        gap: 10px;
+      }
+
+      .overview-item {
+        display: grid;
+        gap: 3px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid rgba(63, 50, 42, 0.11);
+      }
+
+      .overview-item:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .chapters {
+        margin-top: 34px;
+        display: grid;
+        gap: 28px;
+      }
+
+      .chapter {
+        padding: 28px;
+        border-radius: 34px;
+        background:
+          linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(248, 242, 234, 0.98)),
+          repeating-linear-gradient(
+            180deg,
+            transparent,
+            transparent 31px,
+            rgba(118, 89, 68, 0.05) 31px,
+            rgba(118, 89, 68, 0.05) 32px
+          );
+        border: 1px solid rgba(63, 50, 42, 0.12);
+        box-shadow: var(--shadow);
+      }
+
+      .chapter-grid {
+        display: grid;
+        gap: 26px;
+        grid-template-columns: 0.92fr 1.5fr;
+      }
+
+      .chapter-left {
+        padding-right: 6px;
+      }
+
+      .chapter-title {
+        font-size: clamp(1.9rem, 3vw, 2.6rem);
+        line-height: 1.02;
+        margin-bottom: 12px;
+      }
+
+      .chapter-left p {
+        line-height: 1.82;
+        color: #504b46;
+      }
+
+      .chapter-note {
+        margin-top: 18px;
+        padding-top: 16px;
+        border-top: 1px solid rgba(63, 50, 42, 0.12);
+        color: #5d5650;
+      }
+
+      .back-to-top {
+        display: inline-flex;
+        margin-top: 14px;
+        color: var(--accent);
+        text-decoration: none;
+        text-underline-offset: 3px;
+      }
+
+      .back-to-top:hover {
+        text-decoration: underline;
+      }
+
+      .chapter-figure {
+        margin: 18px 0 0;
+        padding: 14px;
+        border: 1px solid rgba(63, 50, 42, 0.12);
+        border-radius: 22px;
+        background: rgba(255, 251, 246, 0.82);
+      }
+
+      .chapter-figure img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+      }
+
+      .chapter-figure figcaption {
+        margin-top: 10px;
+        font-size: 0.9rem;
+        line-height: 1.65;
+        color: #625a54;
+      }
+
+      .paper-list {
+        display: grid;
+        gap: 20px;
+      }
+
+      .chapter-bottom-link {
+        margin-top: 6px;
+      }
+
+      .paper {
+        display: grid;
+        gap: 12px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid rgba(63, 50, 42, 0.14);
+      }
+
+      .paper:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      .paper-header {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        border-radius: 999px;
+        padding: 7px 11px;
+        font-size: 0.78rem;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+        background: var(--accent-soft);
+        color: var(--accent);
+        border: 1px solid rgba(141, 79, 62, 0.16);
+      }
+
+      .paper h3 {
+        font-size: 1.15rem;
+        line-height: 1.4;
+      }
+
+      .citation {
+        color: #59544f;
+        line-height: 1.72;
+      }
+
+      .paper p {
+        color: #4f4944;
+        line-height: 1.75;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 14px;
+      }
+
+      .abstract-toggle,
+      .paper-link {
+        appearance: none;
+        border: 1px solid rgba(141, 79, 62, 0.22);
+        border-radius: 999px;
+        padding: 8px 12px;
+        background: rgba(141, 79, 62, 0.08);
+        color: var(--accent);
+        font: inherit;
+        font-size: 0.92rem;
+        cursor: pointer;
+        transition: background 160ms ease, color 160ms ease, border-color 160ms ease;
+        text-decoration: none;
+      }
+
+      .abstract-toggle:hover,
+      .abstract-toggle[aria-expanded="true"],
+      .paper-link:hover {
+        background: rgba(141, 79, 62, 0.16);
+        border-color: rgba(141, 79, 62, 0.32);
+      }
+
+      .actions a {
+        text-decoration: none;
+      }
+
+      .abstract-panel {
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        margin-top: -2px;
+        padding: 0 16px;
+        border-left: 2px solid rgba(141, 79, 62, 0.18);
+        color: #554f49;
+        transition: max-height 240ms ease, opacity 200ms ease, padding 200ms ease, margin 200ms ease;
+      }
+
+      .abstract-panel.is-open {
+        opacity: 1;
+        margin-top: 4px;
+        padding: 2px 16px 0;
+      }
+
+      .abstract-panel p {
+        font-size: 0.97rem;
+        line-height: 1.78;
+      }
+
+      @media (max-width: 940px) {
+        .hero-grid,
+        .overview,
+        .chapter-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page" id="top">
+      <section class="masthead">
+        <p class="eyebrow">
+          <a href="./index.html">Home</a> /
+          <a href="./research.html">Research</a> /
+          <a href="./cv.pdf">CV</a>
+        </p>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <h1>Research</h1>
+            <p>
+            My first job after completing my PhD was in an inter-disciplinary research center, which stimulated my intellectual 
+            curiousity about different perspectives on human behavior. As a result, my research interests range from empirical 
+            Industrial Organization to how gossip helps build reputation systems; from behavioral change to leadership and 
+            organizational behavior. I regularly collaborate with psychologists, economic theorists, and 
+            social scientists. In this page, you'll find my research outputs (published and 
+            work-in-progress) organized around six themes.
+            </p>
+          </div>
+          <aside class="hero-photo">
+            <img src="./janko-ferlic-sfL_QOnmy00-unsplash.jpg" alt="Portrait placeholder" />
+          </aside>
+        </div>
+
+        <nav class="theme-nav" aria-label="Theme navigation">
+          <a href="#chapter-trust">Trust, Gossip, and Reputation</a>
+          <a href="#chapter-cooperation">Cooperation, Identity, and Social Enforcement</a>
+          <a href="#chapter-markets">Markets, Cartels, and Regulation</a>
+          <a href="#chapter-policy">Institutions, Compliance, and Policy Design</a>
+          <a href="#chapter-leadership">Leadership, Organizational Behavior, and Inequality</a>
+          <a href="#chapter-science">Methodology and Open Science</a>
+        </nav>
+
+       
+
+      <section class="chapters">
+        <article class="chapter" id="chapter-trust">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Trust, Gossip, and Reputation</h2>
+              <p>
+              This line of work relates to decentralised reputation systems, one example being gossip, and how they promote and sustain 
+              cooperation in large or geographically disperse groups. Reputation systems are essential in environments where repeated 
+              interactions are rare. The effectiveness of decentralised reputation systems is often questioned on the basis that inaccuracy 
+              in information transmission, either purposeful or accidental, as this may hamper their ability to sustain cooperation. 
+              My work has focused on establishing whether such inaccuracies can indeed undermine trust. 
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">In press</span>
+                  <span class="pill">Gossip</span>
+                  <span class="pill">Reputation</span>
+                </div>
+                <h3>Gossip and Reputation</h3>
+                <p class="citation">Peters, K., and Fonseca, M.A. | Advances in Experimental Social Psychology</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Gossip -- broadly conceived of as communication about absent third parties -- may be the basis for a naturally occurring 
+                    reputation system. That is, everyday gossip is likely to be the main way that group members collect, curate, and circulate 
+                    information about one another. It may also, therefore, serve the fundamental reputational function of strategic prediction. 
+                    In this chapter, we draw on game theory to examine how gossip about who a target is and what they have done can help audiences 
+                    to predict what they are likely to do in strategic situations. We then argue that gossiping itself can be understood through a 
+                    game theory lens as a cheap talk game. Our analysis reveals that gossipers whose incentives are misaligned with those of their 
+                    audience may try to exploit the predictive value of gossip. We identify important avenues for future work by shining a light 
+                    on underexplored strategic situations and highlighting the predictive value of gossip.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2021</span>
+                  <span class="pill">Gossip</span>
+                  <span class="pill">Deception</span>
+                </div>
+                <h3>Detecting Deception: When Are Gossipers' Lies Detected and Punished?</h3>
+                <p class="citation">Fonseca, M. A., Peters, K. | Philosophical Transactions of the Royal Society B</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>The possibility that gossipers may share dishonest reputational information is a key challenge to claims that 
+                    gossip can shore up cooperation in social groups. It has been suggested that imposing social costs on dishonest 
+                    gossipers should increase the honesty of these reputational signals. However, at present, there is little 
+                    evidence of people's willingness to impose costs on dishonest gossipers; there is also little evidence of their 
+                    ability to detect gossipers' lies in the first place. This paper aims to shed light on people's abilities to 
+                    detect dishonest gossip and their treatment of those who share it. To do this, we report the results of two trust 
+                    game studies using the strategy method (study 1) and repeated interactions in the laboratory (study 2). We show 
+                    that in an environment where gossipers tell spontaneous lies people are more inclined to believe honest than 
+                    dishonest gossip. We also show that people are more likely to treat favourably gossipers they believe to be 
+                    honest, but that this does not always result in more favourable treatment for gossipers who were actually honest. 
+                    We discuss the implications for the potential utility of social sanctions as a tool for securing honesty.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2020</span>
+                  <span class="pill">Media coverage</span>
+                </div>
+                <h3>Truth, Lies and Gossip</h3>
+                <p class="citation">Peters, K., and Fonseca, M. A. | Psychological Science</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a> <a class="paper-link" href="#">Media coverage</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>It is widely assumed that people will share inaccurate gossip for their own selfish purposes. This assumption, if true, 
+                    presents a challenge to the growing body of work that argues that gossip is a ready source of accurate reputational 
+                    information and therefore is welfare improving. We test this inaccuracy assumption by examining the frequency and form of 
+                    spontaneous lies shared between gossiping members of networks playing a series of one-shot trust games (N=320). We manipulate 
+                    whether gossipers are or are not competing with each other. We show that lies make up a sizeable minority of messages, and 
+                    are twice as frequent under gossiper competition. However, this has no discernible effect on trust levels. We attribute this 
+                    to the finding that, one, gossip targets are insensitive to lies, and two, some lies are welfare enhancing. These findings 
+                    suggest that lies need not prevent -- and may help -- gossip to serve reputational functions.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2017</span>
+                  <span class="pill">Media coverage</span>
+                </div>
+                <h3>Will Any Gossip Do? Gossip Does Not Need To Be Perfectly Accurate To Promote Trust</h3>
+                <p class="citation">Fonseca, M. A., and Peters, K. | Games and Economic Behavior</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a> <a class="paper-link" href="#">Media coverage</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>The fact that gossip can be inaccurate, intentionally or otherwise, has led to questions over its ability to build 
+                    cooperation in large societies. We explore the impact of gossip accuracy on trust and trustworthiness in a population 
+                    playing decentralized, two-player trust games. We observed non-trivial levels of spontaneous inaccuracy in gossip, and 
+                    there was evidence that this was largely due to gossipers' desire to punish untrustworthy players. Although this endogenous 
+                    inaccuracy did not adversely affect levels of trust and trustworthiness, introducing high levels of exogenous inaccuracy did. 
+                    Importantly though, we observed greater trust and trustworthiness when highly inaccurate gossip was present than when 
+                    communication was impossible. This suggests that even inaccurate gossip induces a degree of reputational concern in gossip 
+                    targets and some willingness among gossip recipients to discriminate between partners on the basis of the gossip they 
+                    received. Thus, gossip need not be perfectly accurate to effectively induce cooperation.</p>
+                </div>
+              </article>
+              <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter" id="chapter-cooperation">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Cooperation, Identity, and Social Enforcement</h2>
+              <p>
+                In this line of work, I examine of individual behavior is shaped by social processes. Most of my work in this area has focused
+                on the role of social identity fragmentation across identities can shape intra- and inter-group cooperation. I also look at the
+                effectiveness of incentives and social mechanisms like norms and mandates in effecting behavior change.
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+            </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2025</span>
+                  <span class="pill">Cooperation</span>
+                  <span class="pill">Punishment</span>
+                </div>
+                <h3>Promoting Cooperation in an Unequal World: Experimental Evidence on the Role of Transparency and Punishment</h3>
+                <p class="citation">Chen, J., D'Attoma, J., Fonseca, M.A., and Malezieux, A. | Journal of Business Ethics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Across two studies, we examine the role of transparency and peer punishment in promoting cooperation and addressing economic 
+                    inequality in public good contributions. With global inequality rising and the wealthiest few amassing a greater share of 
+                    resources, its impact on social cohesion and business environments is increasingly significant. Financial secrecy further 
+                    compounds these issues by allowing for income and wealth concealment at both societal and organizational levels. Our 
+                    experimental findings reveal that transparency paired with peer punishment significantly boosts cooperation, particularly among 
+                    advantaged individuals. In contrast, peer punishment alone proves insufficient to mitigate the adverse effects of inequality 
+                    without the support of transparency. These results underscore the need for ethical governance structures that incorporate 
+                    transparency, fairness, and accountability -- principles essential for organizations committed to fostering trust and social 
+                    responsibility in unequal settings.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2024</span>
+                  <span class="pill">Social Norms</span>
+                  <span class="pill">Laws and Mandates</span>
+                </div>
+                <h3>The presence of laws and mandates is associated with increased social norm enforcement</h3>
+                <p class="citation">Mulder, L.B., Kurz, T., Prosser, A.M.B., and Fonseca, M.A. | Journal of Economic Psychology</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Policy makers often implement laws or mandates to attempt to change people’s behavior. Such policies act not only as 
+                    deterrents, but also as societal signposts for what is considered morally right and wrong within a society. In this paper we 
+                    argue that the presence of laws and mandates may be associated with citizens’ inclination to engage in social norm enforcement 
+                    within their own network. We studied this using four different datasets in different settings (text-and-drive laws, influenza 
+                    vaccination mandates, speed limit laws, and COVID-19 mask mandates), in three different countries (total N = 3,156). In all 
+                    datasets, we found associations between mandates or laws and the inclination to socially confront norm violators. This is in 
+                    line with our theorizing that mandates and laws may help to increase citizens’ inclination to engage in social norm enforcement, 
+                    and to foster interpersonal policing of behavior, inviting future research to establish more direct causal conclusions in this 
+                    regard.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2024</span>
+                  <span class="pill">Overconfidence</span>
+                  <span class="pill">Social Identity</span>
+                </div>
+                <h3>Do In-Group Biases Lead to Overconfidence in Performance? Experimental Evidence</h3>
+                <p class="citation">Flores, L.Q., and Fonseca, M.A. | Journal of Behavioral and Experimental Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Is the phenomenon of people overestimating their skill relative to their peers (overplacement) exacerbated by group 
+                    affiliation? Social identity theory predicts people evaluate in-group members more positively than out-group members, and we 
+                    hypothesized that this differential treatment may result in greater overplacement when interacting with an out-group member. 
+                    We tested this hypothesis with 301 US voters affiliated with either the Republican or Democratic party in the run-up to the 
+                    2020 Presidential election, a time when political identities were salient and highly polarized. We found there is a higher 
+                    tendency for overplacement when faced with an out-group opponent than with an in-group opponent. Decomposition analysis 
+                    suggests this difference is due to underestimating the opponent, as opposed to overestimating one's own performance to a 
+                    higher degree. Moreover, any tendency to incur in overplacement is mitigated when faced with an opponent with the same 
+                    political identity relative to one with a neutral one. Group affiliation biases initial priors, but not how they are updated.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2021</span>
+                  <span class="pill">Behavior Change</span>
+                  <span class="pill">Social Norms</span>
+                  <span class="pill">Incentives</span>
+                </div>
+                <h3>When a Nudge Is (Not) Enough: Experiments on Social Information and Incentives</h3>
+                <p class="citation">Chen, J., Fonseca, M. A., and Grimshaw, S. B. | Journal of Behavioral and Experimental Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Financial incentives and information nudges are two of the most widely used behaviour change interventions. 
+                    However, we do not yet fully understand how incentives and social information interact. We report two experiments examining 
+                    how incentives and social information interact to induce behavior change. In the first experiment, the behavior of interest 
+                    is punctuality in the field; in the second, we examine cooperation in a large-N prisoners' dilemma in the lab. In both 
+                    experiments participants valued good behavior and believed others also valued it, yet only a minority behaved well. 
+                    We find that incentives work in both environments, while information nudges were only effective in the prisoners' dilemma. 
+                    Incentives complement information nudges only in the prisoners' dilemma. Our experimental design also allows us to distinguish 
+                    between intrinsically motivated and unmotivated subjects: the former respond to treatment manipulations very differently to 
+                    the latter, both behaviourally and in their beliefs about others' behavior.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2019</span>
+                  <span class="pill">Social Identity</span>
+                </div>
+                <h3>Religious Fragmentation, Social Identity and Other-Regarding Preferences</h3>
+                <p class="citation">Chakravarty, S., Fonseca, M. A., Ghosh, S., Kumar, P., and Marjit, S. | Journal of Behavioral and Experimental Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We examine the impact of religious identity and village-level religious fragmentation on other-regarding preferences. 
+                    We report on a series of two-player binary Dictator experiments conducted on a sample of 516 Hindu and Muslim participants in 
+                    rural West Bengal, India. Our treatments are the identity of the two players and the degree of religious fragmentation in the 
+                    village where subjects reside. Both Muslims' and Hindus' aversion to advantageous inequality declines as the probability of 
+                    facing an out-group member increases. We find no evidence of aversion to disadvantageous inequality on either religious sample. 
+                    Both Muslim and Hindu participants display aversion to advantageous inequality in both fragmented villages and homogeneous 
+                    villages. The effect of village fragmentation on aversion to disadvantageous inequality differs across religious groups.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2017</span>
+                  <span class="pill">Social Identity</span>
+                  <span class="pill">Club Goods</span>
+                </div>
+                <h3>Discrimination via Exclusion: An Experiment on Group Identity and Club Goods</h3>
+                <p class="citation">Chakravarty, S., Fonseca, M. A. | Journal of Public Economic Theory</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We study using laboratory experiments the impact on cooperation of allowing individuals to invest in group-specific, 
+                    excludable public goods. We find that allowing different social groups to voluntarily contribute to such goods increases 
+                    total contributions. However, a significant proportion of that contribution goes toward the group-specific club good 
+                    rather than the public good, even when the latter has higher financial returns to cooperation. We find significant evidence 
+                    of in-group biases, which are manifested by positive in-group reciprocity. That is, club goods allow subjects to display their 
+                    preferences for interaction with their in-group members, as well as positive in-group reciprocity.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2016</span>
+                  <span class="pill">Social Identity</span>
+                  <span class="pill">Cooperation</span>
+                  <span class="pill">Social Fragmentation</span>
+                </div>
+                <h3>Religious Fragmentation, Social Identity and Cooperation: Evidence from an Artefactual Field Experiment in India</h3>
+                <p class="citation">Chakravarty, S., Fonseca, M. A., Ghosh, S., and Marjit, S. | European Economic Review</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We study the role of village-level religious fragmentation on intra- and inter-group cooperation in India. 
+                    We report on data on two-player prisoners' dilemma and stag hunt experiments played by 516 Hindu and Muslim 
+                    participants in rural India. Our treatments are the identity of the two players and the degree of village-level 
+                    religious heterogeneity. In religiously heterogeneous villages, cooperation rates in the prisoners' dilemma, 
+                    and to a lesser extent the stag hunt game, are higher when subjects of either religion play with a fellow 
+                    in-group member than when they play with an out-group member or with someone whose identity is unknown. 
+                    Interestingly, cooperation rates among people of the same religion are significantly lower in homogeneous 
+                    villages than in fragmented villages in both games.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2016</span>
+                  <span class="pill">Social Identity</span>
+                  <span class="pill">Cooperation</span>
+                  <span class="pill">Social Fragmentation</span>
+                </div>
+                <h3>Religious Fragmentation, Social Identity and Conflict: Evidence from an Artefactual Field Experiment in India</h3>
+                <p class="citation">Chakravarty, S., Fonseca, M. A., Ghosh, S., and Marjit, S. | PLOS: One</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We examine the impact of religious identity and village-level religious fragmentation on behavior in Tullock contests. 
+                    We report on a series of two-player Tullock contest experiments conducted on a sample of 516 Hindu and Muslim participants 
+                    in rural West Bengal, India. Our treatments are the identity of the two players and the degree of religious fragmentation in 
+                    the village where subjects reside. Our main finding is that the effect of social identity is small and inconsistent across 
+                    the two religious groups in our study. While we find small but statistically significant results in line with our hypotheses 
+                    in the Hindu sample, we find no statistically significant effects in the Muslim sample. This is in contrast to evidence from 
+                    Chakravarty et al. (2016), who report significant differences in cooperation levels in prisoners' dilemma and stag hunt 
+                    games, both in terms of village composition and identity. We attribute this to the fact that social identity may have a more 
+                    powerful effect on cooperation than on conflict.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2014</span>
+                  <span class="pill">Public goods</span>
+                </div>
+                <h3>The Effect of Social Fragmentation on Public Good Provision: An Experimental Study</h3>
+                <p class="citation">Chakravarty, S. and Fonseca, M. A. | Journal of Behavioral and Experimental Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We study the role of social identity in determining the impact of social fragmentation on public good provision using 
+                    laboratory experiments. We find that as long as there is some degree of social fragmentation, increasing it leads to lower 
+                    public good provision by majority group members. This is mainly because the share of those in the majority group who 
+                    contribute fully to the public good diminishes with social fragmentation, while the share of free-riders is unchanged. 
+                    This suggests social identity preferences drive our result, as opposed to self-interest. Importantly, we find no difference 
+                    in contribution between homogeneous and maximally-fragmented treatments, reinforcing our finding that majority groups 
+                    contribute most in the presence of some diversity.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2014</span>
+                  <span class="pill">Public goods</span>
+                </div>
+                <h3>A fine is a more effective financial deterrent when framed retributively and extracted publicly</h3>
+                <p class="citation">Kurz, T., Thomas, W. E., and Fonseca, M. A. | Journal of Behavioral and Experimental Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Introducing monetary fines to decrease an undesired behavior can sometimes have the counterintuitive effect of increasing 
+                    the prevalence of the behavior being targeted. Such findings raise important social psychological questions in relation to 
+                    both the way in which financial penalties are framed and the social contexts in which they are administered. In a field 
+                    experiment (Study 1), we informed participants who had signed up for an experiment that they would be fined if they arrived 
+                    late. This fine was presented as either compensatory or retributive in nature and as being administered either privately or 
+                    publicly. We then observed participants' subsequent arrival time. In accordance with our hypotheses, participants' punctuality 
+                    was only improved (relative to a no-fine control) in response to retributive rather than compensatory fines and when told that 
+                    fines would be administered publicly rather than privately. In Study 2 we used a scenario method to demonstrate that the 
+                    greater efficacy of retributively framed fines can be attributed to their presence being less likely to undermine the 
+                    perceived immorality of transgression than is the case for compensatory fines. We propose a material promotion-moral 
+                    prevention (MPMP) theory to account for our findings and consider its practical implications for the use of financial 
+                    disincentives to encourage cooperative behavior through public policy in domains such as climate change.</p>
+                </div>
+              </article>
+              <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter" id="chapter-markets">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Markets, Cartels, and Regulation</h2>
+              <p>
+                In this line of work I examine determinants of anti-competitive practices in markets. I have looked at the potential of 
+                merger policy to induce tacit collusion, and then I have done extensive work examining the determinants of cartel formation. 
+                My latest work in this area examines the interface between legal regimes on competition and how they affect executive 
+                compensation.
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+            </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2023</span>
+                  <span class="pill">Collusion</span>
+                  <span class="pill">Bertrand markets</span>
+                </div>
+                <h3>How do Antitrust Regimes Impact on Cartel Formation and Managers' Labor Market? An Experiment.</h3>
+                <p class="citation">Fonseca, M.A., Gon&#231;alves, R., Pinho, J., and Tabacco, G. | Journal of Economic Behavior and Organization</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We explore the impacts of different antitrust regimes on managers' labor contracts, when shareholders are intent on their 
+                    managers engaging in price fixing activities. We compare legal regimes that fine firms to regimes that prosecute managers. 
+                    We build a theoretical model, which we take to the laboratory. We observe contract choices of shareholders for a given legal 
+                    regime, as well as the probability of managers forming explicit cartels and coordinating on prices in a repeated Bertrand 
+                    oligopoly, taking contract and legal regime as given. Our results suggest that there is less collusion when the legal regime 
+                    prosecutes managers. High-powered contracts do not incentivize cartel formation or price coordination effectively, 
+                    irrespective of legal regime. Nevertheless, high-powered contracts were most frequently chosen by shareholders, often with 
+                    collusive intents.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2020</span>
+                  <span class="pill">Auctions</span>
+                  <span class="pill">Signalling</span>
+                </div>
+                <h3>Auctions with External Incentives: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A., Giovannoni, F., and Makris, M. | International Journal of Game Theory</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We consider auctions where bidders’ valuations are positively correlated with their productivity in a 
+                    second-stage aftermarket. We test in the lab whether bidders recognize the opportunity to signal their 
+                    productivity through their bidding and, conditional on them doing so, whether disclosing different information 
+                    about the auction outcomes affects their signaling behavior. Our results confirm that bidders recognize 
+                    the signaling opportunities they face and also react to differences in the way their bidding behavior is 
+                    disclosed, although not always in a way that is consistent with theoretical predictions.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2019</span>
+                  <span class="pill">Endogenous Timing</span>
+                  <span class="pill">Bertrand markets</span>
+                </div>
+                <h3>Endogenous Price Leadership with Asymmetric Costs: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A. | Studies in Microeconomics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>This paper presents experimental evidence on the action commitment game with cost-asymmetric firms in a 
+                    differentiated-products Bertrand duopoly. Unlike its quantity-setting counterpart, the risk-dominant leader-follower 
+                    equilibrium Pareto dominates the simultaneous-move equilibrium. This equilibrium also minimizes payoff differences between 
+                    firms. Hence, one would expect the model to accurately capture behavior. The evidence partially supports the theory: low-cost 
+                    firms price in the first period more often than high-cost firms, and depending on the treatment, between 40 and 57 per cent of 
+                    all observations conform to equilibrium play. However, the modal timing outcome involved both firms delaying their pricing 
+                    decision. This timing outcome is characterized by Nash play and some collusion. The high frequency of delaying decisions could 
+                    be due to a desire to reduce strategic uncertainty.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2018</span>
+                  <span class="pill">Collusion</span>
+                  <span class="pill">Cournot markets</span>
+                </div>
+                <h3>Why Factors Facilitating Collusion May Not Predict Cartel Occurrence</h3>
+                <p class="citation">Fonseca, M. A., Li, Y., and Normann, H. T. | Southern Economic Journal</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Factors facilitating collusion may not successfully predict cartel occurrence: When a factor predicts that collusion 
+                    (explicit and tacit) becomes easier, firms might be less inclined to set up a cartel simply because tacit coordination already 
+                    tends to go in hand with supra-competitive profits. We illustrate this issue with laboratory data. We run n-firm Cournot 
+                    experiments with written cheap-talk communication between players and we compare them to treatments with-out the possibility 
+                    to talk. We conduct this comparison for two, four, and six firms. We find that two firms indeed find it easier to collude 
+                    tacitly but that the number of firms does not significantly affect outcomes with communication. As a result, the payoff gain 
+                    from communication increases with the number of firms, at a decreasing rate.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2016</span>
+                  <span class="pill">Penny Auctions</span>
+                  <span class="pill">Learning</span>
+                </div>
+                <h3>Learning From Simultaneous Play: Evidence From Penny Auctions</h3>
+                <p class="citation">Gon&#231;alves, R., and Fonseca, M. A. | Journal of Economics and Management Strategy</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>This paper contributes to the emerging empirical literature on penny auctions, a particular type of all-pay auctions. We 
+                    focus on the potential learning effects that bidders may experience over time but also (and particularly) across auctions as 
+                    a result of their auction participation. Using detailed bid-level information, we find that, similarly to earlier literature, 
+                    bidders suffer from a sunk cost fallacy, whereby their probability of dropping out of an auction is decreasing in the number 
+                    of bids they have already placed in that auction. Although we do find that learning through repeated participation alleviates 
+                    the sunk cost fallacy, participation in simultaneous penny auctions emerges as a much more effective learning mechanism, 
+                    ultimately contributing toward bidders earning higher individual surpluses.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2014</span>
+                  <span class="pill">Collusion</span>
+                  <span class="pill">Bertrand markets</span>
+                </div>
+                <h3>Endogenous Cartel Formation: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A., and Normann, H. T. | Economics Letters</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>In a Bertrand-oligopoly experiment, firms choose whether or not to engage in cartel-like communication and, if so, they may 
+                    get fined by a cartel authority. We find that the four-firm industries form cartels more often than the duopolies because 
+                    they gain less from a hysteresis effect after cartel disruption.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2013</span>
+                  <span class="pill">Collusion</span>
+                  <span class="pill">Bertrand-Edgeworth markets</span>
+                </div>
+                <h3>Excess Capacity and Competition in Bertrand-Edgeworth Markets: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A., and Normann, H. T. | Journal of Institutional and Theoretical Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We conduct experiments testing the relationship between excess capacity and pricing in repeated Bertrand–Edgeworth duopolies 
+                    and triopolies. We systematically vary the experimental markets between low excess capacity (suggesting monopoly) and no 
+                    capacity constraints (suggesting perfect competition). Controlling for the number of firms, higher production capacity leads 
+                    to lower prices. However, the decline in prices as industry capacity rises is less pronounced than predicted by Nash 
+                    equilibrium, and a model of myopic price adjustments has greater predictive power. With higher capacities, Edgeworth-cycle 
+                    behavior becomes less pronounced, causing lower prices. Evidence for tacit collusion is limited and restricted to low-capacity 
+                    duopolies.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2012</span>
+                  <span class="pill">Tacit vs. explicit collusion</span>
+                  <span class="pill">Bertrand Markets</span>
+                </div>
+                <h3>Explicit vs. Tacit Collusion - The Impact of Communication in Oligopoly Experiments</h3>
+                <p class="citation">Fonseca, M. A., and Normann, H. T. | European Economic Review</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We explore the difference between explicit and tacit collusion by investigating the impact communication has in 
+                    experimental markets. For Bertrand oligopolies with various numbers of firms, we compare pricing behavior with and without 
+                    the possibility to communicate among firms. We find strong evidence that talking helps to obtain higher profits for any number 
+                    of firms, however, the gain from communicating is non-monotonic in the number of firms, with medium-sized industries having 
+                    the largest additional profit from talking. We also find that industries continue to collude successfully after communication 
+                    is disabled. Communication supports firms in coordinating on collusive pricing schemes, and it is also used for conflict 
+                    mediation.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2009</span>
+                  <span class="pill">Tullock Contests</span>
+                  <span class="pill">Rent-seeking</span>
+                </div>
+                <h3>An Experimental Investigation of Asymmetric Contests</h3>
+                <p class="citation">Fonseca, M. A. | International Journal of Industrial Organization</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Contest theory has been used in Industrial Organization to describe phenomena like R&D races, or efforts to defend a monopoly 
+                    position. When pricing behavior is constrained by regulators, competition can also take the form of a contest. This paper 
+                    reports on an experimental test of the effects of asymmetry in the Tullock contest success function. Both the simultaneous-move 
+                    and sequential-move frameworks are considered. Despite high levels of overbidding across the different conditions, the 
+                    introduction of asymmetries in the contest function generates experimental behavior on aggregate qualitatively consistent with 
+                    the theoretical predictions. At the individual level, behavior seems divided into those subjects who bid very high amounts and 
+                    those who bid very low amounts.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2008</span>
+                  <span class="pill">Collusion</span>
+                  <span class="pill">Mergers</span>
+                  <span class="pill">Bertrand-Edgeworth markets</span>
+                </div>
+                <h3>Mergers, Asymmetry and Collusion: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A., and Normann, H. T. | Economic Journal</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We analyze the impact of mergers in experimental Bertrand-Edgeworth oligopolies. 
+                    Treatment variables are the number of firms (two, three) and the distribution of industry capacity (symmetric, asymmetric). 
+                    Consistent with a dynamic collusion model, we find that, even though they are more concentrated, asymmetric markets exhibit 
+                    lower prices than symmetric markets with the same number of firms. Consistent with the static Nash prediction, duopolies 
+                    charge higher prices than triopolies when we control for (a)symmetry. The overall impact of a merger (which comprises both 
+                    fewer firms and an asymmetry) is anti-competitive but the price increase is not significant.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2006</span>
+                  <span class="pill">Endogenous timing</span>
+                  <span class="pill">Cournot markets</span>
+                </div>
+                <h3>Endogenous Timing with Observable Delay: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M. A., M&#252ller, W., and Normann, H. T. | International Journal of Game Theory</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>In this paper we experimentally investigate Cournot duopolies with an extended timing game. 
+                    The timing game has observable delay, that is, firms announce a production period (one out of two periods) and then they produce
+                    in the announced sequence. Theory predicts simultaneous production in the first period. With random matching we find that, given 
+                    the actual experimental behavior in the subgames, subjects play a timing game more akin to a coordination game with two 
+                    symmetric equilibria rather than the predicted game with a dominant strategy to produce early. As a result, a substantial 
+                    proportion of subjects choose the second period.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2005</span>
+                  <span class="pill">Endogenous timing</span>
+                  <span class="pill">Cournot markets</span>
+                </div>
+                <h3>Playing Cournot Although They Shouldn't: Endogenous Timing in Experimental Duopolies with Asymmetric Cost</h3>
+                <p class="citation">Fonseca, M. A., Huck, S., and Normann, H. T. | Economic Theory</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>In this note, we experimentally investigate the extended game with action commitment in a Cournot duopoly with asymmetric cost. 
+                    Risk dominance considerations allow to select a unique equilibrium in which the low-cost firm is the Stackelberg leader. 
+                    The data, however, do not support the theory as simultaneous move play is modal. 
+                    Average output choices are in line with the Cournot equilibrium. 
+                    This suggests that Cournot is a much more robust predictor for competition in markets than theory suggests.</p>
+                </div>
+              </article>
+              <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter" id="chapter-policy">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Institutions, Compliance, and Policy Design</h2>
+              <p>
+                Here the focus shifts to taxation, contract enforcement, regulation, and behavioral interventions, asking how
+                institutions change incentives and how people respond to those changes in practice.
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+            </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2022</span>
+                  <span class="pill">Tax compliance</span>
+                  <span class="pill">Labor Supply</span>
+                  <span class="pill">Income Windfalls</span>
+                </div>
+                <h3>The Effects of Income Windfalls on Labour Supply and Tax Compliance: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M.A. and Rahimi, L. | Review of Behavioral Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We examine the effect of cash windfalls on the supply of effort and tax compliance in a high stakes, real effort laboratory 
+                    experiment. Income windfalls have a negative effect on effort, which mirrors existing evidence from the field. Tax compliance 
+                    on labor income is only marginally affected by windfalls. When windfall income is taxable, we find a positive relationship 
+                    between windfall size and compliance. We find no evidence that taxpayers switch from one type of evasion to the other as a 
+                    function of whether windfalls are taxable or not. While compliance levels are lowest among the most productive, there are no 
+                    differential effects of windfalls on compliance along the productivity dimension.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2021</span>
+                  <span class="pill">Regulation</span>
+                </div>
+                <h3>Should Regulators Always be Transparent? A Bank Run Experiment</h3>
+                <p class="citation">Chakravarty, S., Choo, L., Fonseca, M.A., Kaplan, T.R. | European Economic Review</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We study, using laboratory experiments, the extent to which disclosure policies about the financial health of a bank affect 
+                    the likelihood of a bank run. We consider two disclosure regimes, full disclosure and no disclosure, under two scenarios: one 
+                    in which the bank is on average financially solvent and another in which the bank is on average insolvent. When the bank is on 
+                    average insolvent, the full disclosure regime reduces the expected likelihood of runs. In contrast, when the bank is on 
+                    average solvent, the full disclosure regime increases the expected likelihood of runs. We also find that disclosing identical 
+                    information when depositors' expectations are low versus high (good versus bad news) leads to behavioural differences only 
+                    indirectly through their beliefs about the other depositor's actions. Our findings show that instituting a policy of greater 
+                    banking transparency is not always beneficial.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2020</span>
+                  <span class="pill">Legal Procedure</span>
+                  <span class="pill">Contract Enforcement</span>
+                </div>
+                <h3>Preordered Service in Contract Enforcement</h3>
+                <p class="citation">Auerbach, J., and Fonseca, M.A. | Games and Economic Behavior</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>To address delay and backlog at civil courts, we propose a procedural rule that we refer to as preordered service to 
+                    replace sequential service of low-profile cases for breach of contract. Courts preannounce a list that uses uniquely 
+                    identifying information to rank potential low-profile contracts, like a combination of contracting parties' taxpayer numbers. 
+                    They use this list to schedule initial hearings of filed low-profile contract cases in that order. In theory, unlike 
+                    sequential service, preordered service ensures efficiency in a population of investment games through unraveling. Results from 
+                    a laboratory experiment suggest that it may substantially reduce court caseloads.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2017</span>
+                  <span class="pill">Behavioral nudges</span>
+                </div>
+                <h3>Does Using Behavioural Nudges in Pre-Populated Tax Forms Affect Compliance?</h3>
+                <p class="citation">Fonseca, M. A., Grimshaw, S. | Journal of Public Policy &amp; Marketing</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Defaults, in the form of prepopulated fields within the tax form, have been identified as potential mechanisms that tax 
+                    authorities can use to reduce noncompliance. They achieve this by simplifying the process of filing taxes, thus reducing the 
+                    scope for errors. However, defaults may increase the scope for evasion if set incorrectly. The authors report experimental 
+                    data on the effect of correct and incorrect defaults. They find that prepopulating tax returns is a worthwhile policy only 
+                    if it is done with highly reliable information. Setting default levels that underestimate taxpayers' true tax liability 
+                    leads to significant drops in compliance and tax revenue. The authors also study whether nudges that contain messages with 
+                    descriptive norms about compliance can mitigate the adverse effect of prepopulated returns with incorrect values. Nudges 
+                    that react to inputs from the taxpayer effectively raise compliance, whereas static nudges do not. This result demonstrates 
+                    the limits to the applicability of nudges in a public policy sphere as well as possible adverse effects resulting from poor 
+                    implementation.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2016</span>
+                  <span class="pill">Field and lab evidence</span>
+                </div>
+                <h3>Do Students Behave Like Real Taxpayers? Experimental Evidence on Taxpayer Compliance From the Lab and From the Field</h3>
+                <p class="citation">Choo, L., Fonseca, M. A. and Myles, G. | Journal of Economic Behavior and Organization</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>We report on data from a real-effort tax compliance experiment using three subject pools: students, who do not pay income 
+                    tax; company employees, whose income is reported by their employer; and self-employed taxpayers, who are responsible for 
+                    filing and payment. While compliance behavior is unaffected by changes in the level of, or information about the audit
+                    probability, higher fines increase compliance. We find subject pool differences: self-assessed taxpayers are the most 
+                    compliant, while students are the least compliant. Through a simple framing manipulation, we show that such differences are 
+                    driven by norms of compliance from outside the lab.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2014</span>
+                  <span class="pill">Bank Runs</span>
+                  <span class="pill">Contagion</span>
+                </div>
+                <h3>An Experiment on the Causes of Bank Run Contagions</h3>
+                <p class="citation">Chakravarty, S., Fonseca, M. A., and Kaplan, T. R. | European Economic Review</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>To understand the mechanisms behind bank run contagions, we conduct bank run experiments in a modified Diamond-Dybvig setup 
+                    with two banks (Left and Right). The banks' liquidity levels are either linked or independent. Left Bank depositors see their 
+                    bank's liquidity level before deciding. Right Bank depositors only see Left Bank withdrawals before deciding. We find that 
+                    Left Bank depositors' actions significantly affect Right Bank depositors' behavior, even when liquidities are independent. 
+                    Furthermore, a panic may be a one-way street: an increase in Left Bank withdrawals can cause a panic run on the Right Bank, 
+                    but a decrease does not calm depositors.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2013</span>
+                  <span class="pill">Forecasting</span>
+                </div>
+                <h3>The Wisdom of Crowds: Predicting a Weather and Climate-Related Event</h3>
+                <p class="citation">Hueffer, K., Fonseca, M. A., Leiserowitz, A., and Taylor, K. M. | Judgment and Decision Making</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Environmental uncertainty is at the core of much of human activity, ranging from daily decisions by individuals 
+                    to long-term policy planning by governments. Yet, there is little quantitative evidence on the ability of 
+                    non-expert individuals or populations to forecast climate-related events. Here we report on data from a 90-year 
+                    old prediction game on a climate related event in Alaska: the Nenana Ice Classic (NIC). Participants in this 
+                    contest guess to the nearest minute when theice covering the Tanana River will break, signaling the start of 
+                    spring. Previous research indicates a strong correlation between the ice breakup datesand regional weather 
+                    conditions. We study betting decisions between 1955 and 2009. We find the betting distribution closely predicts 
+                    the outcome of the contest. We also find a significant correlation between regional temperatures as well as past 
+                    ice breakups and betting behavior, suggesting that participants incorporate both climate and historical 
+                    information into their decision-making.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2012</span>
+                  <span class="pill">Queueing</span>
+                  <span class="pill">Spot Markets</span>
+                </div>
+                <h3>An Advantage of Resource Queues over Spot Markets: Decision Coordination in Experiments with Resource Uncertainty</h3>
+                <p class="citation">Fonseca, M. A., Pfaff, A., and Osgood, D. | American Journal of Agricultural Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Farmers have to make key decisions, such as which crops to plant or whether to prepare the soil, before knowing how much 
+                    water they will get. They face losses if they make costly decisions but do not receive water, and they may forego profits if 
+                    they receive water without being prepared. We consider the coordination of farmers’ decisions, such as which crops to plant 
+                    or whether to prepare the soil when farmers must divide an uncertain water supply. We compare ex-ante queues (pre-decision) 
+                    to an ex-post spot market (post-decision & post-rain) in experiments in rural Brazil and a university in England. Queues 
+                    have greater coordination success than does the spot market.</p>
+                </div>
+              </article>
+               <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="chapter" id="chapter-leadership">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Leadership, Organizational Behavior, and Inequality</h2>
+              <p>
+                This theme gathers research on leadership, organizational identification, gender beliefs, pay inequality, and
+                performance, showing how status and group dynamics shape outcomes inside institutions.
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+            </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2025</span>
+                  <span class="pill">Gender beliefs</span>
+                </div>
+                <h3>The Role of Experience in Shifting Gender Beliefs on Performance: Experimental Evidence</h3>
+                <p class="citation">Fonseca, M.A., McCrea, A. | Journal of Economic Behavior and Organization</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>In labour markets, women are often underrepresented relative to men. This underrepresentation may be due to inaccurate 
+                    beliefs about ability across genders. Inaccurate beliefs might cause a sampling problem: to have accurate beliefs about a 
+                    group, one must first collect information about it. However, employers may not wish to shortlist individuals from a group 
+                    that is perceived to exhibit lower quality. Inaccurate beliefs may also persist due to biased belief updating. We run a 
+                    stylised hiring experiment to disentangle these two effects. We ask participants to create shortlists from a male and a 
+                    female pool of workers and give them feedback on the skill of those they shortlist. Based on that information, participants 
+                    hire workers, and provide us with their beliefs about the distribution of skills in the male and female pots. We study how 
+                    employers update their beliefs as a function of their past shortlisting behaviour, and how they shortlist given their beliefs. 
+                    Participants were more likely to sample from the pool with the higher subjective mean quality (on average men) and lower 
+                    subjective variance. Participants were not Bayesian updaters but there were no gender-specific biases in updating. Sampling 
+                    more from a pool and spending more time sampling yield more accurate beliefs.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2024</span>
+                  <span class="pill">Pay gap</span>
+                </div>
+                <h3>Do Followers Mind the Pay Gap? An Experimental Test of the Impact of the Vertical Pay Gap on Leader Effectiveness</h3>
+                <p class="citation">Peters, K., Fonseca, M.A., Hauser, O.P., and Steffens, N. | Leadership Quarterly</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>The pay gap between those in leadership positions and other organisational members has risen markedly over the last five 
+                    decades. There is evidence that this gap may undermine subordinate identification with and evaluation of the organisation and 
+                    its leaders. To date, however, there is limited evidence that this gap affects related subordinate behaviour, including their 
+                    willingness to follow their leader's commands and work for the organisational public good. To address this, we ran two 
+                    pre-registered experiments (Study 1: N = 318; Study 2: N = 327) that examined participants' real effort behaviour in temporary 
+                    'organisations' with a small or large leader-worker pay gap. We varied whether this pay gap was exogenously determined 
+                    (Study 1), or endogenously chosen by the leader (Study 2). In both studies, workers in large (versus small) pay gap 
+                    organisations were less likely to identify with their leader and organisation and reported poorer affective well-being. 
+                    They were also less willing, at least initially, to follow their leader's commands. When the size of the pay gap was 
+                    endogenously chosen by the leader, workers in large (versus small) gap organisations reduced their contributions to the 
+                    public good. We discuss implications for organisational leadership and performance.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2023</span>
+                  <span class="pill">Productivity</span>
+                  <span class="pill">Organizations</span>
+                </div>
+                <h3>How Much will Climate Change Reduce Productivity in a High-Technology Supply Chain?</h3>
+                <p class="citation">Chen, J., Fonseca, M.A., Heyes, A., Yang, J. and Zhang, X. | Environmental and Resource Economics</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a> <a class="paper-link" href="#">Media coverage</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>The frequency of hot days in much of the world is increasing. What is the impact of high temperatures on 
+                    productivity? Can technology-based adaptation mitigate such effects of climate change? We provide some answers 
+                    to these questions by examining how high outdoor temperatures affect a high-technology, precision manufacturing 
+                    setting. Exploiting individual-level data on the quantity and quality of work done across 35,190 worker-shifts 
+                    in a leading NYSE-listed silicon wafer maker in China, we evidence a negative effect of outdoor heat on 
+                    productivity. The effects are large: in our preferred linear specification, an increase in wet bulb temperature 
+                    of 10&deg;C causes a reduction in output of 8.3%. Temperature effects exist even though the manufacturer's work-spaces are indoors and protected by high-quality climate control systems. Results are not driven by extreme weather events and are robust to alternative modelling approaches. They illustrate the potential future adverse economic effects of climate change in most of the industrialised world.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2019</span>
+                  <span class="pill">CEO Pay</span>
+                  <span class="pill">Leadership</span>
+                </div>
+                <h3>Fat Cats and Thin Followers: Excessive CEO Pay May Reduce Ability to Lead</h3>
+                <p class="citation">Peters, K. O., Fonseca, M. A., Haslam, S. A., Steffens, N. K., and Quiggin, J. | The Social Psychology of Inequality</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>The large discrepancy between the pay of chief executive officers (CEOs) and their subordinates within organizations is 
+                    attracting increasing attention and controversy. While there is evidence that this pay disparity may be contributing to rises 
+                    in societal income inequality (and thus the range of associated social ills), there is little understanding of the impact of 
+                    pay disparity on CEOs' abilities to effectively lead their organizations. Drawing on the social identity approach to 
+                    leadership, we argue that as the pay of CEOs increases relative to their followers, these followers will be less likely to 
+                    identify with their CEOs as "one of us." This, in turn, should undermine followers' willingness to be influenced by the CEO: 
+                    to follow their lead. We discuss two recent studies that provide the first test of these claims. These studies provide 
+                    archival and experimental evidence that high CEO pay reduces followers' identification as well as their perceptions that the 
+                    CEO is a charismatic identity leader. In sum, then, this work suggests that high CEO pay may directly impair their capacity 
+                    to perform their core function of leading their organization.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2018</span>
+                  <span class="pill">Leadership</span>
+                  <span class="pill">Feedback</span>
+                </div>
+                <h3>How Feedback About Leadership Potential Impacts Ambition, Organizational Commitment, and Performance</h3>
+                <p class="citation">Steffens, N. K., Fonseca, M. A., Ryan, M. K., Rink, F. A., Stoker, J. I., Nederveen Pieterse, A. | The Leadership Quarterly</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>In the present research we report results from two experimental studies that examine how feedback about leadership potential 
+                    impacts leadership ambition, organizational commitment, and performance. Study 1 used an experimental vignette methodology 
+                    that controls for prior performance. Results show that individuals who receive feedback that they have low potential to be a 
+                    future leader have lower ambition and organizational commitment relative to those who receive feedback that they have high 
+                    potential to be a future leader. Study 2 provides evidence of the causal behavioral effects of feedback about leadership 
+                    potential using a real task effort environment. Results show that participants informed to be unlikely future leaders display 
+                    lower performance in a subsequent task than participants informed to be likely future leaders. The findings from the two 
+                    studies demonstrate that information about leadership potential affects subsequent ambition to become leaders as well as 
+                    performance. We discuss the implications of these findings for the importance of followership, talent management, and 
+                    leadership succession.</p>
+                </div>
+              </article>
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2012</span>
+                  <span class="pill">Organisational Identification</span>
+                 </div>
+                <h3>Working with Subgroup Identities to Build Organizational Identification and Support for Organizational Strategy: A Test of the ASPIRe Model</h3>
+                <p class="citation">Peters, K. O., Haslam, S. A., Ryan, M. K., and Fonseca, M. A. | Group and Organisation Management</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>A growing body of evidence indicates that organizational identification underpins a range of important organizational 
+                    outcomes. However, to date, the literature has provided little empirically grounded guidance for organizations that are 
+                    trying to develop organizational identification among their employees. In this article, the authors aim to address this 
+                    lacuna by testing the effectiveness of the ASPIRe (Actualizing Social and Personal Identity Resources) model-a model that 
+                    specifies a sequence of structured activities designed to use subgroup identities as a platform for building organizational 
+                    identification-in a bespoke workshop delivered to senior military health services personnel. As predicted by the ASPIRe model, 
+                    participants reported increased levels of subgroup and organizational identification as a result of the workshop and were 
+                    also more supportive of the organization's strategy.</p>
+                </div>
+              </article>
+              <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+        <article class="chapter" id="chapter-science">
+          <div class="chapter-grid">
+            <div class="chapter-left">
+              <h2 class="chapter-title">Methodology and Open Science</h2>
+              <p>
+              I was involved in the SCORE project which sought to investigate the replicability of research in social sciences, 
+              both as an author and as an editor. 
+              </p>
+              <a class="back-to-top" href="#top">Back to the top</a>
+            </div>
+            <div class="paper-list">
+              <article class="paper">
+                <div class="paper-header">
+                  <span class="pill">2026</span>
+                  <span class="pill">Replicability</span>
+                </div>
+                <h3>Investigating the Replicability of the Social and Behavioral Sciences</h3>
+                <p class="citation">Tyner, A. H., (...), Fonseca, M.A., (...), Nosek, B. A., and Errington, T. M. | Nature</p>
+                <div class="actions"><button class="abstract-toggle" type="button" aria-expanded="false">Abstract</button><a class="paper-link" href="#">Paper</a></div>
+                <div class="abstract-panel" hidden>
+                  <p>Pursuing replicability --independent evidence for previous claims-- is important for creating generalizable knowledge. 
+                    Here we attempted replications of 274 claims of positive results from 164 quantitative papers published from 2009 to 2018 in 
+                    54 journals in the social and behavioural sciences. Replications were high powered on average to detect the original effect 
+                    size (median of 99.6%), used original materials when relevant and available, and were peer reviewed in advance through a 
+                    standardized internal protocol. Replications showed statistically significant results in the original pattern for 151 of 274 
+                    claims (55.1% (95% confidence interval (CI) 49.2-60.9%)) and for 80.8 of 164 papers (49.3% (95% CI 43.8-54.7%)), weighed for 
+                    replicating multiple claims per paper. We observed modest variation in replication rates across disciplines (42.5-63.1%), 
+                    although some estimates had high uncertainty. The median Pearson's r effect size was 0.25 (95% CI 0.21-0.27) for original 
+                    studies and 0.10 (95% CI 0.09-0.13) for replication studies, an 82.4% (95% CI 67.8-88.2%) reduction in shared variance. 
+                    Thirteen methods for evaluating replication success provided estimates ranging from 28.6% to 74.8% (median of 49.3%). Some 
+                    decline in effect size and significance is expected based on power to detect original effects and regression to the mean 
+                    because we replicated only positive results. We observe that challenges for replicability extend across social-behavioural 
+                    sciences, illustrating the importance of identifying conditions that promote or inhibit replicability.</p>
+                </div>
+              </article>
+              <div class="chapter-bottom-link">
+                <a class="back-to-top" href="#top">Back to the top</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      </section>
+
+    </main>
+    <script>
+      const abstractToggles = document.querySelectorAll(".abstract-toggle");
+
+      abstractToggles.forEach((button) => {
+        const panel = button.parentElement.nextElementSibling;
+
+        button.addEventListener("click", () => {
+          const isOpen = button.getAttribute("aria-expanded") === "true";
+
+          if (isOpen) {
+            panel.style.maxHeight = `${panel.scrollHeight}px`;
+            requestAnimationFrame(() => {
+              button.setAttribute("aria-expanded", "false");
+              panel.classList.remove("is-open");
+              panel.style.maxHeight = "0px";
+            });
+            window.setTimeout(() => {
+              panel.hidden = true;
+            }, 240);
+            return;
+          }
+
+          panel.hidden = false;
+          panel.style.maxHeight = "0px";
+
+          requestAnimationFrame(() => {
+            button.setAttribute("aria-expanded", "true");
+            panel.classList.add("is-open");
+            panel.style.maxHeight = `${panel.scrollHeight}px`;
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

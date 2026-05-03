@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home Editorial Mockup</title>
+    <style>
+      :root {
+        --paper: #f5efe6;
+        --paper-deep: #efe5d7;
+        --ink: #1f2120;
+        --muted: #5f5a55;
+        --line: rgba(63, 50, 42, 0.18);
+        --accent: #8d4f3e;
+        --accent-soft: rgba(141, 79, 62, 0.12);
+        --shadow: 0 24px 50px rgba(48, 39, 32, 0.08);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: "Avenir Next", "Gill Sans", sans-serif;
+        background:
+          radial-gradient(circle at top left, rgba(141, 79, 62, 0.14), transparent 28%),
+          linear-gradient(180deg, #f8f3eb 0%, #f4ede3 48%, #f0e7db 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      h1,
+      h2,
+      p {
+        margin: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: "Iowan Old Style", "Baskerville", "Palatino Linotype", serif;
+      }
+
+      .page {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 44px 0 84px;
+      }
+
+      .eyebrow {
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        font-size: 0.78rem;
+        color: var(--muted);
+      }
+
+      .hero {
+        display: grid;
+        gap: 28px;
+        grid-template-columns: 360px 1fr;
+        align-items: center;
+        padding: 30px;
+        border-radius: 34px;
+        border: 1px solid rgba(63, 50, 42, 0.12);
+        background:
+          linear-gradient(180deg, rgba(255, 252, 247, 0.98), rgba(248, 242, 234, 0.98)),
+          repeating-linear-gradient(
+            180deg,
+            transparent,
+            transparent 31px,
+            rgba(118, 89, 68, 0.05) 31px,
+            rgba(118, 89, 68, 0.05) 32px
+          );
+        box-shadow: var(--shadow);
+      }
+
+      .photo-slot {
+        min-height: 460px;
+        border-radius: 28px;
+        border: 1px solid rgba(63, 50, 42, 0.14);
+        background:
+          linear-gradient(180deg, rgba(141, 79, 62, 0.1), rgba(141, 79, 62, 0.03)),
+          linear-gradient(135deg, rgba(255, 255, 255, 0.55), rgba(255, 255, 255, 0.12));
+        display: grid;
+        place-items: center;
+        text-align: center;
+        padding: 24px;
+        color: #6b5a51;
+        overflow: hidden;
+      }
+
+      .photo-slot img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+      }
+
+      .content {
+        display: grid;
+        gap: 18px;
+      }
+
+      h1 {
+        max-width: none;
+        font-size: clamp(2.4rem, 4.5vw, 4rem);
+        line-height: 0.98;
+        letter-spacing: -0.02em;
+      }
+
+
+      .intro {
+        max-width: 56ch;
+        font-size: 1.04rem;
+        line-height: 1.85;
+        color: #4f4a45;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 8px;
+      }
+
+      .button-row a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 160px;
+        padding: 12px 18px;
+        text-decoration: none;
+        border-radius: 999px;
+        border: 1px solid rgba(141, 79, 62, 0.2);
+        background: rgba(141, 79, 62, 0.09);
+        color: var(--accent);
+        font-size: 0.96rem;
+        transition: background 160ms ease, transform 160ms ease;
+      }
+
+      .button-row a:hover {
+        background: rgba(141, 79, 62, 0.16);
+        transform: translateY(-1px);
+      }
+
+      .note {
+        padding-top: 6px;
+        font-size: 0.92rem;
+        line-height: 1.7;
+        color: #685f59;
+      }
+
+      .footer-card {
+        margin-top: 26px;
+        padding: 22px 24px;
+        border-radius: 28px;
+        background: rgba(255, 252, 247, 0.72);
+        border: 1px solid rgba(63, 50, 42, 0.1);
+        color: #4f4944;
+      }
+
+      .footer-card h2 {
+        font-size: 1.6rem;
+        margin-bottom: 8px;
+      }
+
+      .footer-card p {
+        max-width: 80ch;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 920px) {
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .photo-slot {
+          min-height: 320px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <div class="photo-slot">
+          <img src="./miguel_sketch.png" alt="Portrait of Miguel A. Fonseca" />
+        </div>
+
+        <div class="content">
+          <p class="eyebrow">
+            <a href="./index.html">Home</a> /
+            <a href="./research.html">Research</a> /
+            <a href="./cv.pdf">CV</a>
+          </p>
+          <h1>Miguel A. Fonseca </h1>
+          <p class="intro">
+            I am a Professor of Economics at the University of Exeter Business School.
+            My expertise is in empirical methods applied to behavioural economics, industrial economics, and organizational behavior.
+          </p>
+
+          <div class="button-row">
+            <a href="https://www.linkedin.com/in/miguel-fonseca-b5a383/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://scholar.google.com/citations?user=_9DTwqcAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+            <a href="./cv.pdf">CV</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-card">
+        <p class="eyebrow">Short Bio</p>
+        <h2></h2>
+        <p>
+          I am currently a Professor of Economics at the University of Exeter Business School, the Co-Director of the FEELE lab at 
+          the University of Exeter Business School, and I am an Associate Researcher 
+          at NIPE, University of Minho. Prior to being at Exeter, I was a post-doctoral researcher at Columbia University.
+        </p>
+        <br>
+        <p>  
+          I was a Co-Editor of the <i>Journal of Economics and Management Strategy</i> from 2019 to 2026.
+        </p>
+        <br> 
+        <p>
+          My research sits at the intersection of behavioral economics, institutions, cooperation, and organizational behavior, 
+          with work published in leading journals including <i>Economic Journal</i>, <i>Games and Economic Behavior</i>, 
+          <i>Leadership Quarterly</i>, <i>Psychological Science</i>, and <i>Philosophical Transactions of the Royal Society B</i>.
+        </p>
+        <br>
+        <p>
+          I have led or contributed to research projects funded by the ESRC, HMRC, NSF, and ISF.
+        </p>
+        <br> 
+        <p>  
+          I am the co-founder of (and current contributor to) the Exeter Prize for the best paper in experimental economics, 
+          decision theory and behavioural economics.
+        </p>
+      </section>
+    </main>
+  </body>
+</html>
