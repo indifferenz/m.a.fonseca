@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://indifferenz.github.io/m.a.fonseca/sitemap.xml
